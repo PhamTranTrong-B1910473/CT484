@@ -6,6 +6,8 @@ import 'ui/products/user_products_screen.dart';
 
 import 'ui/cart/cart_screen.dart';
 
+import 'ui/orders/orders_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       //   color: Colors.green,
       //  ),
       home: SafeArea(
-        child: CartScreen(),
+        child: OrdersScreen(),
       ),
     );
   }

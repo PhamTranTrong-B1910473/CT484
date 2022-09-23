@@ -5,7 +5,7 @@ import '../shared/dialog_utils.dart';
 
 class CartItemCard extends StatelessWidget {
   final String productId;
-  final CardItem cardItem;
+  final CartItem cardItem;
 
   const CartItemCard({
     required this.productId,

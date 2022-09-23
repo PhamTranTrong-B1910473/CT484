@@ -1,23 +1,23 @@
-class CardItem {
+class CartItem {
   final String id;
   final String title;
   final int quantity;
   final double price;
 
-  CardItem({
+  CartItem({
     required this.id,
     required this.title,
     required this.quantity,
     required this.price,
   });
 
-  CardItem copyWith({
+  CartItem copyWith({
     String? id,
     String? title,
     int? quantity,
     double? price,
   }) {
-    return CardItem(
+    return CartItem(
         id: id ?? this.id,
         title: title ?? this.title,
         quantity: quantity ?? this.quantity,
