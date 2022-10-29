@@ -14,17 +14,19 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          //create: (ctx) => ProductManager(),
           create: (ctx) => ProductsManager(),
         ),
         ChangeNotifierProvider(
           create: (ctx) => CartManager(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => OrdersManager(),
         ),
       ],
       child: MaterialApp(
@@ -62,19 +64,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-////////////
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
   void _incrementCounter() {
     setState(() {
       _counter++;

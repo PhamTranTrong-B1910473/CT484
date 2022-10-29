@@ -28,6 +28,16 @@ class UserProductListTile extends StatelessWidget {
     );
   }
 
+  // Widget buildDeleteButton(BuildContext context) {
+  //   return IconButton(
+  //     icon: const Icon(Icons.delete),
+  //     onPressed: () async {
+  //       print('Delete a product');
+  //     },
+  //     color: Theme.of(context).errorColor,
+  //   );
+  // }
+
   Widget buildDeleteButton(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.delete),

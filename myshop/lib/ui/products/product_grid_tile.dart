@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../models/product.dart';
 import 'product_detail_screen.dart';
+import 'product_detail_screen.dart';
 
 import 'package:provider/provider.dart';
 import '../cart/cart_manager.dart';
@@ -59,7 +60,7 @@ class ProductGridTile extends StatelessWidget {
           Icons.shopping_cart,
         ),
         onPressed: () {
-          //print('Add item to cart');
+          // print('Add item to cart');
           final cart = context.read<CartManager>();
           cart.addItem(product);
           ScaffoldMessenger.of(context)

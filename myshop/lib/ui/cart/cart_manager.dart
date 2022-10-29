@@ -1,5 +1,6 @@
-import '../../models/cart_item.dart';
 import 'package:flutter/foundation.dart';
+
+import '../../models/cart_item.dart';
 import '../../models/product.dart';
 
 class CartManager with ChangeNotifier {
@@ -7,16 +8,15 @@ class CartManager with ChangeNotifier {
     'p1': CartItem(
       id: 'c1',
       title: 'Red Shirt',
-      price: 29.29,
+      price: 29.99,
       quantity: 2,
     ),
   };
-
   int get productCount {
     return _items.length;
   }
 
-  List<CartItem> get product {
+  List<CartItem> get products {
     return _items.values.toList();
   }
 
