@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
           //create: (ctx) => ProductManager(),
           create: (ctx) => ProductsManager(),
         ),
+        ChangeNotifierProvider(
+          create: (ctx) => CartManager(),
+        ),
       ],
       child: MaterialApp(
         title: 'My Shop',
