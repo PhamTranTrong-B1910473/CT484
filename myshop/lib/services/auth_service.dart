@@ -8,6 +8,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../models/http_exception.dart';
 import '../models/auth_token.dart';
 
+import 'dart:developer';
+
 class AuthService {
   static const _authTokenKey = 'authToken';
   late final String? _apiKey;
@@ -40,6 +42,8 @@ class AuthService {
       }
 
       final authToken = _fromJson(responseJson);
+      log(authToken.userId);
+      log(authToken.token!);
       _saveAuthToken(authToken);
 
       return authToken;
